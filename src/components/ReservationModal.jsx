@@ -386,19 +386,19 @@ const ReservationModal = ({ isOpen, onClose }) => {
                   </div>
 
                   {/* Date and Time Row */}
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="flex flex-row gap-3 sm:gap-4 items-end">
                     {/* Date */}
-                    <div className="space-y-2">
+                    <div className="space-y-2 flex-1 min-w-0">
                       <Label
                         htmlFor="date"
-                        className="font-body text-sm text-[#1A2F23]"
+                        className="font-body text-sm text-[#1A2F23] block truncate"
                       >
                         {t("reservation.date")}
                       </Label>
                       <div className="relative">
-                        <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#A3A3A3] pointer-events-none z-10" />
+                        <Calendar className="absolute left-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#A3A3A3] pointer-events-none z-10" />
                         {!formData.date && (
-                          <span className="absolute left-10 top-1/2 -translate-y-1/2 text-[#A3A3A3] font-body text-sm pointer-events-none z-10">
+                          <span className="absolute left-8 top-1/2 -translate-y-1/2 text-[#A3A3A3] font-body text-[12px] xs:text-sm pointer-events-none z-10 whitespace-nowrap">
                             dd / mm / yyyy
                           </span>
                         )}
@@ -411,17 +411,17 @@ const ReservationModal = ({ isOpen, onClose }) => {
                           onChange={handleInputChange}
                           onClick={(e) => e.currentTarget.showPicker()}
                           // className="pl-10 font-body bg-white border-[#1A2F23]/20 focus:border-[#C2410C] focus:ring-[#C2410C]"
-                          className={`pl-10 font-body bg-white border-[#1A2F23]/20 focus:border-[#C2410C] focus:ring-[#C2410C] ${!formData.date ? "text-transparent" : "text-inherit"}`}
+                          className={`pl-8.5 pr-1 font-body bg-white border-[#1A2F23]/20 focus:border-[#C2410C] focus:ring-[#C2410C] ${!formData.date ? "text-transparent" : "text-inherit"}`}
                           data-testid="reservation-date-input"
                         />
                       </div>
                     </div>
 
                     {/* Time */}
-                    <div className="space-y-2">
+                    <div className="space-y-2 flex-1 min-w-0">
                       <Label
                         htmlFor="time"
-                        className="font-body text-sm text-[#1A2F23]"
+                        className="font-body text-sm text-[#1A2F23] block truncate"
                       >
                         {t("reservation.time")}
                       </Label>
@@ -432,7 +432,7 @@ const ReservationModal = ({ isOpen, onClose }) => {
                         }
                       >
                         <SelectTrigger
-                          className="font-body bg-white border-[#1A2F23]/20 focus:border-[#C2410C] focus:ring-[#C2410C]"
+                          className="w-full font-body bg-white border-[#1A2F23]/20 focus:border-[#C2410C] focus:ring-[#C2410C]"
                           data-testid="reservation-time-select"
                         >
                           <Clock className="w-4 h-4 text-[#A3A3A3] mr-2" />
