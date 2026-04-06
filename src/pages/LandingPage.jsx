@@ -6,6 +6,7 @@ import ReviewsSection from "@/components/ReviewsSection";
 import LocationSection from "@/components/LocationSection";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import QRCode from "@/components/QRCode";
 import ReservationModal from "@/components/ReservationModal";
 
 const LandingPage = () => {
@@ -26,14 +27,14 @@ const LandingPage = () => {
       className="min-h-screen bg-[#FDFBF7] grain-overlay"
       data-testid="landing-page"
     >
-      <Navbar 
+      <Navbar
         onMenuClick={() => scrollToSection(menuRef)}
         onReviewsClick={() => scrollToSection(reviewsRef)}
         onLocationClick={() => scrollToSection(locationRef)}
         onReservationClick={() => setIsReservationOpen(true)}
       />
-      <HeroSection 
-        onMenuClick={() => scrollToSection(menuRef)} 
+      <HeroSection
+        onMenuClick={() => scrollToSection(menuRef)}
         onReservationClick={() => setIsReservationOpen(true)}
       />
       <div ref={menuRef}>
@@ -45,12 +46,13 @@ const LandingPage = () => {
       <div ref={locationRef}>
         <LocationSection />
       </div>
+      <QRCode />
       <Footer />
-      
+
       {/* Reservation Modal */}
-      <ReservationModal 
-        isOpen={isReservationOpen} 
-        onClose={() => setIsReservationOpen(false)} 
+      <ReservationModal
+        isOpen={isReservationOpen}
+        onClose={() => setIsReservationOpen(false)}
       />
     </motion.div>
   );
