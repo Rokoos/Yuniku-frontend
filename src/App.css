@@ -33,7 +33,9 @@
 
 /* Menu card hover effects */
 .menu-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .menu-card:hover {
@@ -71,7 +73,7 @@
 }
 
 .brush-decoration::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -8px;
   left: 50%;
@@ -84,7 +86,9 @@
 
 /* Social links hover */
 .social-link {
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .social-link:hover {
@@ -100,7 +104,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #A3370A;
+  background-color: #a3370a;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(194, 65, 12, 0.3);
 }
@@ -128,7 +132,9 @@
 .fade-in-up {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .fade-in-up.visible {
@@ -143,7 +149,7 @@
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -183,4 +189,22 @@
   .hero-section {
     min-height: 100svh;
   }
+}
+/* 1. Add a placeholder using the 'before' pseudo-element */
+input[type="date"]::before {
+  content: "dd / mm / yyyy"; /* Or your translated placeholder */
+  width: 100%;
+  color: #a3a3a3; /* Match your other placeholder colors */
+}
+
+/* 2. Hide the placeholder once a value is selected or the field is focused */
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+  display: none;
+  content: "";
+}
+
+/* 3. Ensure the native text doesn't overlap on some Android versions */
+input[type="date"]:invalid::before {
+  display: inline-block;
 }
