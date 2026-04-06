@@ -412,7 +412,7 @@ const ReservationModal = ({ isOpen, onClose }) => {
                           onClick={(e) => e.currentTarget.showPicker()}
                           // className="pl-10 font-body bg-white border-[#1A2F23]/20 focus:border-[#C2410C] focus:ring-[#C2410C]"
                           // className={`pl-8.5 pr-1 font-body bg-white border-[#1A2F23]/20 focus:border-[#C2410C] focus:ring-[#C2410C] ${!formData.date ? "text-transparent" : "text-inherit"}`}
-                          className={`pl-9 pr-2 w-full font-body bg-white border-[#1A2F23]/20 focus:border-[#C2410C] focus:ring-[#C2410C] h-10 ${
+                          className={`h-10 pl-9 pr-2 w-full font-body bg-white border-[#1A2F23]/20 focus:border-[#C2410C] focus:ring-[#C2410C] ${
                             !formData.date
                               ? "text-transparent"
                               : "text-inherit text-sm"
@@ -438,7 +438,7 @@ const ReservationModal = ({ isOpen, onClose }) => {
                         }
                       >
                         <SelectTrigger
-                          className="w-full font-body bg-white border-[#1A2F23]/20 focus:border-[#C2410C] focus:ring-[#C2410C]"
+                          className="h-10 w-full font-body bg-white border-[#1A2F23]/20 focus:border-[#C2410C] focus:ring-[#C2410C]"
                           data-testid="reservation-time-select"
                         >
                           <Clock className="w-4 h-4 text-[#A3A3A3] mr-2" />

@@ -208,3 +208,14 @@ input[type="date"]:valid::before {
 input[type="date"]:invalid::before {
   display: inline-block;
 }
+/* Standardize Safari's date input internal height */
+input[type="date"]::-webkit-datetime-edit {
+  display: block;
+  padding: 0;
+  line-height: 1;
+}
+
+/* Fix for shrunken height on some iOS versions when empty */
+input[type="date"]::-webkit-date-and-time-value {
+  min-height: 1.5em;
+}
