@@ -391,14 +391,14 @@ const ReservationModal = ({ isOpen, onClose }) => {
                     <div className="space-y-2 flex-1 min-w-0">
                       <Label
                         htmlFor="date"
-                        className="font-body text-sm text-[#1A2F23] block truncate"
+                        className="font-body text-sm text-[#1A2F23]"
                       >
                         {t("reservation.date")}
                       </Label>
-                      <div className="relative">
-                        <Calendar className="absolute left-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#A3A3A3] pointer-events-none z-10" />
+                      <div className="relative flex items-center">
+                        <Calendar className="absolute left-3 w-4 h-4 text-[#A3A3A3] pointer-events-none z-30" />
                         {!formData.date && (
-                          <span className="absolute left-8 top-1/2 -translate-y-1/2 text-[#A3A3A3] font-body text-[12px] xs:text-sm pointer-events-none z-10 whitespace-nowrap">
+                          <span className="absolute left-9 text-[#A3A3A3] font-body text-[13px] pointer-events-none z-20 whitespace-nowrap">
                             dd / mm / yyyy
                           </span>
                         )}
@@ -411,7 +411,13 @@ const ReservationModal = ({ isOpen, onClose }) => {
                           onChange={handleInputChange}
                           onClick={(e) => e.currentTarget.showPicker()}
                           // className="pl-10 font-body bg-white border-[#1A2F23]/20 focus:border-[#C2410C] focus:ring-[#C2410C]"
-                          className={`pl-8.5 pr-1 font-body bg-white border-[#1A2F23]/20 focus:border-[#C2410C] focus:ring-[#C2410C] ${!formData.date ? "text-transparent" : "text-inherit"}`}
+                          // className={`pl-8.5 pr-1 font-body bg-white border-[#1A2F23]/20 focus:border-[#C2410C] focus:ring-[#C2410C] ${!formData.date ? "text-transparent" : "text-inherit"}`}
+                          className={`pl-9 pr-2 w-full font-body bg-white border-[#1A2F23]/20 focus:border-[#C2410C] focus:ring-[#C2410C] h-10 ${
+                            !formData.date
+                              ? "text-transparent"
+                              : "text-inherit text-sm"
+                          }`}
+                          style={{ WebkitAppearance: "none" }}
                           data-testid="reservation-date-input"
                         />
                       </div>
