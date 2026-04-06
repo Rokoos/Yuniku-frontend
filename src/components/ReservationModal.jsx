@@ -397,6 +397,11 @@ const ReservationModal = ({ isOpen, onClose }) => {
                       </Label>
                       <div className="relative">
                         <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#A3A3A3] pointer-events-none z-10" />
+                        {!formData.date && (
+                          <span className="absolute left-10 top-1/2 -translate-y-1/2 text-[#A3A3A3] font-body text-sm pointer-events-none z-10">
+                            dd / mm / yyyy
+                          </span>
+                        )}
                         <Input
                           id="date"
                           name="date"
@@ -405,7 +410,8 @@ const ReservationModal = ({ isOpen, onClose }) => {
                           value={formData.date}
                           onChange={handleInputChange}
                           onClick={(e) => e.currentTarget.showPicker()}
-                          className="pl-10 font-body bg-white border-[#1A2F23]/20 focus:border-[#C2410C] focus:ring-[#C2410C]"
+                          // className="pl-10 font-body bg-white border-[#1A2F23]/20 focus:border-[#C2410C] focus:ring-[#C2410C]"
+                          className={`pl-10 font-body bg-white border-[#1A2F23]/20 focus:border-[#C2410C] focus:ring-[#C2410C] ${!formData.date ? "text-transparent" : "text-inherit"}`}
                           data-testid="reservation-date-input"
                         />
                       </div>
