@@ -7,7 +7,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#121212] py-12 px-4 sm:px-6 lg:px-8" data-testid="footer">
+    <footer
+      className="bg-[#121212] py-12 px-4 sm:px-6 lg:px-8"
+      data-testid="footer"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -25,7 +28,10 @@ const Footer = () => {
           </p>
 
           {/* Social Links */}
-          <div className="flex items-center gap-6 mb-8" data-testid="footer-social">
+          <div
+            className="flex items-center gap-6 mb-8"
+            data-testid="footer-social"
+          >
             <a
               href="https://www.facebook.com/YunikuAsian/"
               target="_blank"
@@ -58,7 +64,10 @@ const Footer = () => {
 
           {/* Made with love */}
           <p className="font-body text-xs text-[#A3A3A3] mt-3 flex items-center gap-1">
-            {t("footer.madeWith")} <Heart size={12} className="text-[#C2410C]" fill="#C2410C" /> {t("footer.inPoland")}
+            {/* {t("footer.madeWith")}{" "}
+            <Heart size={12} className="text-[#C2410C]" fill="#C2410C" />{" "}
+            {t("footer.inPoland")} */}
+            By Marcin Widomski - 797 992 207
           </p>
         </motion.div>
       </div>
