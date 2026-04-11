@@ -63,11 +63,17 @@ const Footer = () => {
           </p>
 
           {/* Made with love */}
-          <p className="font-body text-xs text-[#A3A3A3] mt-3 flex items-center gap-1">
+          <p className="font-body text-sm text-[#A3A3A3] mt-3 flex items-center gap-1">
             {/* {t("footer.madeWith")}{" "}
             <Heart size={12} className="text-[#C2410C]" fill="#C2410C" />{" "}
             {t("footer.inPoland")} */}
             By Marcin Widomski - 797 992 207
+          </p>
+          <p className="font-body text-sm text-[#A3A3A3] mt-3 flex items-center gap-1">
+            {/* {t("footer.madeWith")}{" "}
+            <Heart size={12} className="text-[#C2410C]" fill="#C2410C" />{" "}
+            {t("footer.inPoland")} */}
+            m.widomski@tlen.pl
           </p>
         </motion.div>
       </div>
